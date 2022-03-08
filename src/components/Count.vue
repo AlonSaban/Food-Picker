@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import counterStore from '../counter'
+import counterStore from '../store/counter'
 
 export default defineComponent({
   setup() {

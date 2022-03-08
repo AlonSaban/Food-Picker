@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
-import userStore from '../user'
+import userStore from '../store/user'
 
 export default defineComponent({
   setup() {

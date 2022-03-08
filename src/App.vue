@@ -1,7 +1,7 @@
 <script lang="ts">
 import Count from './components/Count.vue'
 import Login from './pages/Login.vue'
-import userStore from './user'
+import userStore from './store/user'
 import { onMounted, defineComponent } from 'vue';
 
 export default defineComponent({
