@@ -1,12 +1,28 @@
-<script setup lang="ts">
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
-import Home from './pages/Home.vue'
+<script lang="ts">
+import Count from './components/Count.vue'
+import Login from './pages/Login.vue'
+import userStore from './user'
+import { onMounted, defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'App',
+  components: { Login, Count },
+  setup() {
+    onMounted(userStore.getUser)
+    return { userStore }
+  }
+})
 </script>
 
 <template>
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  <Home />
+  <div v-if="!userStore.getters.isLoggedIn">
+    <Login />
+  </div>
+  <div v-else>
+    <h2>Welcome,{{ userStore.state.name }}</h2>
+    <Count />
+    <button @click="userStore.logout()">Logout</button>
+  </div>
 </template>
 
 <style>

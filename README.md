@@ -1,2 +1,3 @@
-# Vue 3 + Typescript + Vite
+work in progress
+# Vue 3 + Fastify + Typescript + Vite
 Vite Vue3-fastify in typescript, fullstack project. The project aims to solve one of every day life's biggest struggles, what to eat? In Food Picker you'll have the option for quick answer with 'surprise me' which will show you the complete recipe to make said dish, or even better create your own profile to farther customize your preference, the site aims to be fast friendly and easy to use.
